@@ -1,0 +1,127 @@
+﻿body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  
+  background: url('https://cdn.dribbble.com/users/8873682/screenshots/16285269/media/4f25b53eef859461b91fcd5db9a936b8.jpg?resize=768x576&vertical=center'); /* Adjust the path based on your project structure */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#chat-container {
+  width: 1000px;
+  height: 500px;
+  margin: 20px;
+  padding: 20px;
+ 
+  border-radius: 8px;
+   
+  box-shadow: 0 0 20px rgba(231, 21, 21, 0.1);
+}
+
+#chat-output {
+  height: 430px;
+  overflow-y: scroll;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: wheat;
+  border: 1px solid #ddd;
+  font-weight: bold;
+}
+
+#input-container {
+  display: flex;
+  gap: 10px;
+  
+}
+
+#message-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #6f00ff;
+  border-radius: 5px;
+  font-weight: bold;
+  font-style: oblique;
+  
+}
+
+#message-input:focus {
+  outline: none;
+  border-color: #1f9c24;
+}
+
+body, button {
+  transition: background-color 0.3s ease;
+}
+
+/* Add these styles to distinguish between user and stranger messages */
+.user-message {
+  text-align: right;
+  color: navy;
+}
+
+.stranger-message {
+  text-align: left;
+  color: rgb(255, 0, 136);
+}
+
+
+button {
+  font-family: inherit;
+  font-size: 20px;
+  background: royalblue;
+  color: white;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+button span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+button svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+button:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+button:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+button:hover span {
+  transform: translateX(5em);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+
+
