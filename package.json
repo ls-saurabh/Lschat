@@ -1,11 +1,11 @@
 {
-  "name": "chat",
+  "name": "Lschat",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "pm2 start server.js",
-  "build": "npm install && npm start"
+    "build": "npm install"
   },
   "keywords": [],
   "author": "",
